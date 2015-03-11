@@ -746,7 +746,9 @@ function dtRendererService(DTLoadingTemplate) {
     function renderDataTable($elem, options) {
         var dtId = '#' + $elem.attr('id');
         if ($.fn.dataTable.isDataTable(dtId)) {
-            options.destroy = true;
+            if( options ){
+                options.destroy = true;
+            }
         }
         // See http://datatables.net/manual/api#Accessing-the-API to understand the difference between DataTable and dataTable
         var DT = $elem.DataTable(options);
