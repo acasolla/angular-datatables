@@ -746,7 +746,7 @@ function dtRendererService(DTLoadingTemplate) {
     function renderDataTable($elem, options) {
         var dtId = '#' + $elem.attr('id');
         if ($.fn.dataTable.isDataTable(dtId)) {
-            if( options ){
+            if ( options ){
                 options.destroy = true;
             }
         }
